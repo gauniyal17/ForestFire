@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f7fa;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Forest Fire Prediction</h2>
+        <form action="/predictdata" method="post">
+            <label for="Temperature">Temperature:</label>
+            <input type="text" name="Temperature" required>
+
+            <label for="RH">Relative Humidity (RH):</label>
+            <input type="text" name="RH" required>
+
+            <label for="Ws">Wind Speed (Ws):</label>
+            <input type="text" name="Ws" required>
+
+            <label for="Rain">Rainfall (Rain):</label>
+            <input type="text" name="Rain" required>
+
+            <label for="FFMC">FFMC Index:</label>
+            <input type="text" name="FFMC" required>
+
+            <label for="DMC">DMC Index:</label>
+            <input type="text" name="DMC" required>
+
+            <label for="ISI">ISI Index:</label>
+            <input type="text" name="ISI" required>
+
+            <label for="Classes">Fire Class (0/1):</label>
+            <input type="text" name="Classes" required>
+
+            <label for="Region">Region (Encoded Value):</label>
+            <input type="text" name="Region" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+</body>
+</html>
